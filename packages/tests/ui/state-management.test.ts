@@ -4,7 +4,7 @@ import seedPacketsState, {
 	seedPackets,
 	isLoading,
 	error,
-} from '../../src/lib/seed-packets.state.js'
+} from '../../packages/src/lib/seed-packets.state.js'
 
 describe('State Management', () => {
 	beforeEach(() => {

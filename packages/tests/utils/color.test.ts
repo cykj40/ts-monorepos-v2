@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { rgbToCss, type IRGBColor } from '../../src/utils/color.js'
+import { rgbToCss, type IRGBColor } from '../../packages/src/utils/color.js'
 
 describe('rgbToCss', () => {
 	it('should convert RGB values to CSS rgb() format', () => {

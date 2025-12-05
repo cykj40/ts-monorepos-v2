@@ -6,12 +6,12 @@ import {
 	formatEdibleParts,
 	wrapText,
 	capitalizeWords,
-} from '../../src/utils/formatting.js'
+} from '../../packages/src/utils/formatting.js'
 import type {
 	USDAHardinessZoneRangeMap,
 	SeedPacketInfo,
 	Distance,
-} from '../../src/models/seed-packet.model.js'
+} from '../../packages/src/models/seed-packet.model.js'
 
 describe('formatUSDAZone', () => {
 	it('should format single zone from multiSeason', () => {
