@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "noEmit": true,
+    "noImplicitAny": true,
+    "allowJs": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "files": [],
+  "references": [
+    { "path": "./packages/models" },
+    { "path": "./packages/server" },
+    { "path": "./packages/ui" }
+  ]
+}
+

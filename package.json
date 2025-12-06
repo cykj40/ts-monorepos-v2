@@ -1,20 +1,27 @@
 {
-    "name": "seeds",
-    "private": true,
-    "version": "0.0.1",
-    "scripts": {
-        "build": "pnpm --color run -r build",
-        "lint": "pnpm --color run -r lint",
-        "test": "pnpm --color run -r test",
-        "test:watch": "pnpm --color run -r test:watch",
-        "test:ui": "pnpm --color run -r test:ui",
-        "test:coverage": "pnpm --color run -r test:coverage",
-        "check": "pnpm --color run -r check",
-        "format": "pnpm --color run -r format",
-        "dev": "pnpm --color run -r dev"
-    },
-     "volta": {
-    "node": "22.16.0"
-  }
-    
+	"name": "seeds",
+	"private": true,
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "concurrently -n \"Server,Client\" -c \"yellow,blue\" \"pnpm --filter @seeds/server run dev\" \"pnpm --filter @seeds/ui run dev\"",
+		"build": "pnpm --color run -r build",
+		"lint": "pnpm --color run -r lint",
+		"test": "pnpm --color run -r test",
+		"test:watch": "pnpm --color run -r test:watch",
+		"test:ui": "pnpm --color run -r test:ui",
+		"test:coverage": "pnpm --color run -r test:coverage",
+		"check": "pnpm --color run -r check",
+		"format": "pnpm --color run -r format"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.28.0",
+		"concurrently": "^9.1.2",
+		"eslint": "^9.28.0",
+		"prettier": "^3.5.3",
+		"typescript": "~5.8.3",
+		"typescript-eslint": "^8.34.0"
+	},
+	"volta": {
+		"node": "22.16.0"
+	}
 }

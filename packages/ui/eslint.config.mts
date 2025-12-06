@@ -10,7 +10,7 @@ export default tseslint.config(
 		languageOptions: {
 			parserOptions: {
 				projectService: true,
-				tsconfigRootDir: __dirname,
+				tsconfigRootDir: import.meta.dirname,
 			},
 		},
 	},
@@ -25,14 +25,15 @@ export default tseslint.config(
 		},
 	},
 	{
-		ignores: ['**/assets/**/*'],
+		ignores: ['**/assets/**/*', '**/dist/**/*', '**/node_modules/**/*', '**/eslint.config.mts'],
 	},
 	{
-		files: ['**/tailwind.config.js'],
-		rules: {},
+		files: ['**/tailwind.config.js', '**/svelte.config.js'],
+		...tseslint.configs.disableTypeChecked,
 	},
 	{
 		files: ['**/postcss.config.cjs'],
+		...tseslint.configs.disableTypeChecked,
 		languageOptions: {
 			globals: {
 				require: 'readonly',
@@ -43,4 +44,9 @@ export default tseslint.config(
 			},
 		},
 	},
+	{
+		files: ['**/vite.config.ts'],
+		...tseslint.configs.disableTypeChecked,
+	},
 )
+

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "noImplicitAny": true,
+    "allowJs": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "include": ["src/**/*.ts", "tests/**/*.ts"],
+  "exclude": ["node_modules", "dist"],
+  "references": []
+}

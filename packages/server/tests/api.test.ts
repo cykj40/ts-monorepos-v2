@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
-import { SeedPacketModel } from '../../packages/src/models/seed-packet.model.js'
+import type { SeedPacketModel } from '@seeds/models'
 
 // Mock global fetch for server tests
 global.fetch = vi.fn()
@@ -33,7 +33,7 @@ describe('Server API Tests', () => {
 		expect(response.ok).toBe(true)
 		expect(data.seedPackets).toBeDefined()
 		expect(data.seedPackets).toHaveLength(1)
-		expect(data.seedPackets[0].commonName).toBe('Test Plant')
+		expect(data.seedPackets[0]?.commonName).toBe('Test Plant')
 	})
 
 	it('should handle API error response', async () => {
