@@ -1,0 +1,17 @@
+{
+	"workspaces": {
+		"packages/ui": {
+			"entry": ["src/main.ts"],
+			"project": "src/**/*.{ts,svelte}"
+		},
+		"packages/server": {
+			"entry": ["src/index.ts"],
+			"project": "src/**/*.ts"
+		},
+		"packages/models": {
+			"entry": ["src/index.ts"],
+			"project": "src/**/*.ts"
+		}
+	},
+	"ignoreDependencies": ["@manypkg/cli", "syncpack", "@vitest/coverage-v8"]
+}

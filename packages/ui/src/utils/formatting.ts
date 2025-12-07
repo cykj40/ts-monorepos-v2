@@ -1,8 +1,4 @@
-import type {
-	USDAHardinessZoneRangeMap,
-	SeedPacketInfo,
-	Distance,
-} from '@seeds/models'
+import type { USDAHardinessZoneRangeMap, SeedPacketInfo, Distance } from '@seeds/models'
 
 /**
  * Formats USDA hardiness zone data into a human-readable string
@@ -74,23 +70,9 @@ export function formatEdibleParts(edibleParts: string[]): string {
 	return edibleParts.join(', ')
 }
 
-/**
- * Formats light preference values into more readable format
- * @param lightPreference - Light preference enum value
- * @returns Formatted light preference string
- */
-export function formatLightPreference(lightPreference: string): string {
-	return lightPreference.replace('-', '-')
-}
 
-/**
- * Formats water needs into more readable format
- * @param waterNeeds - Water needs enum value
- * @returns Formatted water needs string
- */
-export function formatWaterNeeds(waterNeeds: string): string {
-	return waterNeeds
-}
+
+
 
 /**
  * Capitalizes the first letter of each word in a string

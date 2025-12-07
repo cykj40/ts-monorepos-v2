@@ -3,15 +3,18 @@
     "target": "ESNext",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
     "noImplicitAny": true,
     "allowJs": true,
     "strict": true,
     "allowSyntheticDefaultImports": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src/**/*.ts", "tests/**/*.ts"],
+  "include": ["src/**/*.ts", "src/**/*.svelte", "tests/**/*.ts"],
   "exclude": ["node_modules", "dist"],
   "references": [
-    { "path": "../models" }
+    { "path": "../models/tsconfig.build.json" }
   ]
 }

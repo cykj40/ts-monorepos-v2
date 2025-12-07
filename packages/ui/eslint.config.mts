@@ -25,7 +25,12 @@ export default tseslint.config(
 		},
 	},
 	{
-		ignores: ['**/assets/**/*', '**/dist/**/*', '**/node_modules/**/*', '**/eslint.config.mts'],
+		ignores: [
+			'**/assets/**/*',
+			'**/dist/**/*',
+			'**/node_modules/**/*',
+			'**/eslint.config.mts',
+		],
 	},
 	{
 		files: ['**/tailwind.config.js', '**/svelte.config.js'],
@@ -49,4 +54,3 @@ export default tseslint.config(
 		...tseslint.configs.disableTypeChecked,
 	},
 )
-

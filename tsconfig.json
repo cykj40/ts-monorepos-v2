@@ -8,8 +8,10 @@
     "allowJs": true,
     "strict": true,
     "allowSyntheticDefaultImports": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "types": ["node"]
   },
+  "include": ["eslint.config.mts"],
   "files": [],
   "references": [
     { "path": "./packages/models" },

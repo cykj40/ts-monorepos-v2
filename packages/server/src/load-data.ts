@@ -11,4 +11,4 @@ export function loadData(): SeedPacketCollectionModel {
 	return yaml.parse(data) as SeedPacketCollectionModel
 }
 
-export default loadData
+
