@@ -1,32 +1,35 @@
 {
-	"name": "seeds",
-	"private": true,
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "concurrently -n \"Server,Models,Client\" -c \"yellow,green,blue\" \"pnpm --filter @seeds/server run dev\" \"pnpm --filter @seeds/models run build --watch\" \"pnpm --filter @seeds/ui run dev\"",
-		"build": "pnpm --color run -r build",
-		"lint": "pnpm --color run -r lint",
-		"test": "pnpm --color run -r test",
-		"test:watch": "pnpm --color run -r test:watch",
-		"test:ui": "pnpm --color run -r test:ui",
-		"test:coverage": "pnpm --color run -r test:coverage",
-		"check": "pnpm --color run -r check",
-		"format": "prettier --write packages/*/{src,tests}/**/*.ts packages/*/{tailwind.config.js,postcss.config.cjs,vite.config.ts,svelte.config.js,eslint.config.mts}"
-	},
-	"devDependencies": {
-		"@eslint/js": "^9.28.0",
-		"@manypkg/cli": "^0.25.1",
-		"@types/node": "^24.10.1",
-		"concurrently": "^9.1.2",
-		"eslint": "^9.28.0",
-		"knip": "^5.71.0",
-		"prettier": "^3.5.3",
-		"prettier-plugin-svelte": "^3.4.0",
-		"syncpack": "14.0.0-alpha.32",
-		"typescript": "~5.8.3",
-		"typescript-eslint": "^8.34.0"
-	},
-	"volta": {
-		"node": "22.16.0"
-	}
+  "name": "seeds",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "concurrently -n \"Server,Models,Client\" -c \"yellow,green,blue\" \"pnpm --filter @seeds/server run dev\" \"pnpm --filter @seeds/models run build --watch\" \"pnpm --filter @seeds/ui run dev\"",
+    "build": "pnpm --color run -r build",
+    "lint": "pnpm --color run -r lint",
+    "test": "pnpm --color run -r test",
+    "test:watch": "pnpm --color run -r test:watch",
+    "test:ui": "pnpm --color run -r test:ui",
+    "test:coverage": "pnpm --color run -r test:coverage",
+    "check": "pnpm --color run -r check",
+    "ci": "pnpm run build && pnpm run lint && pnpm run test && pnpm run check",
+    "format": "prettier --write packages/*/{src,tests}/**/*.ts packages/*/{tailwind.config.js,postcss.config.cjs,vite.config.ts,svelte.config.js,eslint.config.mts}"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "@manypkg/cli": "^0.25.1",
+    "@types/node": "^24.10.1",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.28.0",
+    "knip": "^5.71.0",
+    "lerna": "^9.0.3",
+    "nx": "22.2.1",
+    "prettier": "^3.5.3",
+    "prettier-plugin-svelte": "^3.4.0",
+    "syncpack": "14.0.0-alpha.32",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.34.0"
+  },
+  "volta": {
+    "node": "22.16.0"
+  }
 }
